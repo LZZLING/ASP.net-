@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/First.Master" AutoEventWireup="true" CodeBehind="母首页.master.cs" Inherits="WebApplication1.母首页" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript" src="js/JQuery.js"></script>
+    <link href="css/sidebars.css" rel="stylesheet">
+    <script src="js/sidebars.js"></script>
+    <%--<script type="text/javascript" >
+
+        $(function () {
+            $('a').click(function () {
+                $(this).toggleClass('active').siblings().removeClass('active');
+            });
+        });
+    </script>--%>
+    <script type="text/javascript">
+        $(function () {
+            $(".mushouye").mousemove(function () {
+                $(this).addClass("text-danger");
+                $(this).siblings().removeClass("text-danger");    // .siblings() 返回被选元素的所有同级元素（其余）。
+            });
+        });
+
+
+    </script>
+
+    <div class="row">
+        <div class="col-9 mt-1">
+            <div>
+                
+                            <asp:Button ID="Button5" runat="server" class="mushouye  offset-1 col-md-2 btn btn-outline-primary   btn-sm " Text="生活" OnClick="Button5_Click" ></asp:Button>
+                            <asp:Button ID="Button4" runat="server" class="mushouye col-md-2 btn btn-outline-primary  btn-sm" Text="工作" OnClick="Button4_Click"  ></asp:Button>
+                            <asp:Button ID="Button3" runat="server" class="mushouye col-md-2 btn btn-outline-primary  btn-sm" Text="健康" OnClick="Button3_Click"  ></asp:Button>
+                            <asp:Button ID="Button2" runat="server" class="mushouye col-md-2 btn btn-outline-primary  btn-sm" Text="技能" OnClick="Button2_Click"  ></asp:Button>
+                            <asp:Button ID="Button1" runat="server" class="mushouye col-md-2 btn btn-outline-primary  btn-sm" Text="知识" OnClick="Button1_Click"   ></asp:Button>
+<%--                            <button type="button" ><a href="首知识.aspx">知识</a></button>--%>
+                            <!--<a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Link</a>-->
+                
+
+            </div>
+            <div >
+                        <asp:ContentPlaceHolder ID="mushouye" runat="server">
+                        </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="col-3 ">
+            <div class="col-12 column  border-bottom ">
+					<div class="mt-3 m-3 " style="background-color:white;border:1px solid white;border-radius:3px">
+						<div class=" p-2 ">
+							<table class="table table-borderless">
+                                <thead>
+                                        <tr style="border-bottom: 1px solid gainsboro;">
+                                                
+
+                                            <td style="font-size:13px;">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16" style="color: #00cc00">
+                                                      <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356Z"/>
+                                                      <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.499.499 0 0 0-.032.14.192.192 0 0 0 .193.193c.039 0 .077-.01.111-.029l1.268-.733a.622.622 0 0 1 .308-.088c.058 0 .116.009.171.025a6.83 6.83 0 0 0 1.625.26 4.45 4.45 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02.05 0 .1 0 .15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826Zm4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Zm3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Z"/>
+                                                    </svg>
+                                                     GML的微信交流群开放啦！ヾ(≧▽≦*)o
+                                            </td>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size:12px;" class="text-muted">
+                                            <div>
+                                            氛围超好的学习群，小伙伴们可以提问和交流知识，
+                                            <a href="#" runat="server" style="text-decoration:none;">点击了解详情</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+								
+						</div>
+							
+					</div>
+				</div>
+            <div class="col-12 column  border-bottom ">
+					<div class="mt-3 m-3 " style="background-color:white;border:1px solid white;border-radius:3px">
+						<div class=" p-2 ">
+							<table class="table table-borderless">
+                                <thead>
+                                        <tr style="border-bottom: 1px solid gainsboro;">
+                                                
+
+                                            <td style="font-size:13px;">
+                                                     
+                                                     <h6>
+                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                                      <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                                     </svg>
+                                                         关于本站
+
+                                                     </h6>
+                                            </td>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size:12px;" class="text-muted">
+                                            <div>
+                                            致力于帮助暂时没有目标或目标模糊的朋友确定目标，同时获取其它小伙伴的建议和经验，选择、实现自己理想的Life
+                                            <a href="#" runat="server" style="text-decoration:none;">站长GML&nbsp;计算机及生活热爱者</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+								
+						</div>
+							
+					</div>
+				</div>
+            <div class="col-12 column  border-bottom ">
+					<div class="mt-3 m-3 " style="background-color:white;border:1px solid white;border-radius:3px">
+							<div class="card" >
+                              <img src="/images/5.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">未定</h5>
+                                <p class="card-text">广告</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm">前往</a>
+                              </div>
+                            </div>
+					</div>
+				</div>
+        </div>
+    </div>
+     <div class="text-center">
+        <p class="mt-5 mb-3 text-muted">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+                <a href="#" runat="server" style="text-decoration:none;color:#737373">支持项目</a>
+            &nbsp;&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
+                <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.324.324 0 0 0-.12.366l.218.81a.616.616 0 0 1 .029.117.166.166 0 0 1-.162.162.177.177 0 0 1-.092-.03l-1.057-.61a.519.519 0 0 0-.256-.074.509.509 0 0 0-.142.021 5.668 5.668 0 0 1-1.576.22ZM9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.615.615 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.627.627 0 0 0 .098.356Z"/>
+                <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.499.499 0 0 0-.032.14.192.192 0 0 0 .193.193c.039 0 .077-.01.111-.029l1.268-.733a.622.622 0 0 1 .308-.088c.058 0 .116.009.171.025a6.83 6.83 0 0 0 1.625.26 4.45 4.45 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02.05 0 .1 0 .15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826Zm4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Zm3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0Z"/>
+            </svg>
+            <a href="#" runat="server" style="text-decoration:none;color:#737373">联系作者</a>
+            &nbsp;&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+            </svg>
+                <a href="#" runat="server" style="text-decoration:none;color:#737373">免责声明</a>
+        </p>
+        <p class="mt-3 mb-3 text-muted">&copy; 2022人生指南-GM</p>
+    </div>
+    
+    
+    
+</asp:Content>

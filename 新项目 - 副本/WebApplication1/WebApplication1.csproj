@@ -1,0 +1,539 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CD99FCF-A645-4401-BEDF-F224CB34CD93}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44356</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\LifeLeader.mdf" />
+    <Content Include="App_Data\LifeLeader_log.ldf">
+      <DependentUpon>LifeLeader.mdf</DependentUpon>
+    </Content>
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.rtl.css" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.rtl.min.css" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.esm.js" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.esm.min.js" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.min.js" />
+    <Content Include="child1.aspx" />
+    <Content Include="css\1.css" />
+    <Content Include="css\sidebars.css" />
+    <Content Include="css\signin.css" />
+    <Content Include="dist\css\bootstrap-theme.css" />
+    <Content Include="dist\css\bootstrap-theme.min.css" />
+    <Content Include="dist\css\bootstrap.css" />
+    <Content Include="dist\css\bootstrap.min.css" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="dist\js\bootstrap.js" />
+    <Content Include="dist\js\bootstrap.min.js" />
+    <Content Include="dist\js\jquery-3.4.1.js" />
+    <Content Include="dist\js\npm.js" />
+    <Content Include="Global.asax" />
+    <Content Include="images\CBFFAC53266F8BB850A527C3BE221BA7.png" />
+    <Content Include="images\mei%281%29.png" />
+    <Content Include="images\浅绿.jpg" />
+    <Content Include="js\1.js" />
+    <Content Include="js\affix.js" />
+    <Content Include="js\alert.js" />
+    <Content Include="js\button.js" />
+    <Content Include="js\carousel.js" />
+    <Content Include="js\collapse.js" />
+    <Content Include="js\dropdown.js" />
+    <Content Include="js\JQuery.js" />
+    <Content Include="js\modal.js" />
+    <Content Include="js\popover.js" />
+    <Content Include="js\scrollspy.js" />
+    <Content Include="js\sidebars.js" />
+    <Content Include="js\tab.js" />
+    <Content Include="js\tests\index.html" />
+    <Content Include="js\tests\unit\affix.js" />
+    <Content Include="js\tests\unit\alert.js" />
+    <Content Include="js\tests\unit\button.js" />
+    <Content Include="js\tests\unit\carousel.js" />
+    <Content Include="js\tests\unit\collapse.js" />
+    <Content Include="js\tests\unit\dropdown.js" />
+    <Content Include="js\tests\unit\modal.js" />
+    <Content Include="js\tests\unit\popover.js" />
+    <Content Include="js\tests\unit\scrollspy.js" />
+    <Content Include="js\tests\unit\tab.js" />
+    <Content Include="js\tests\unit\tooltip.js" />
+    <Content Include="js\tests\vendor\jquery.min.js" />
+    <Content Include="js\tests\visual\affix-with-sticky-footer.html" />
+    <Content Include="js\tests\visual\affix.html" />
+    <Content Include="js\tests\visual\alert.html" />
+    <Content Include="js\tests\visual\button.html" />
+    <Content Include="js\tests\visual\carousel.html" />
+    <Content Include="js\tests\visual\collapse.html" />
+    <Content Include="js\tests\visual\dropdown.html" />
+    <Content Include="js\tests\visual\modal.html" />
+    <Content Include="js\tests\visual\popover.html" />
+    <Content Include="js\tests\visual\scrollspy.html" />
+    <Content Include="js\tests\visual\tab.html" />
+    <Content Include="js\tests\visual\tooltip.html" />
+    <Content Include="js\tooltip.js" />
+    <Content Include="js\transition.js" />
+    <Content Include="js\util.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="teset.aspx" />
+    <Content Include="test1.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="个个人资料.aspx" />
+    <Content Include="个健康.aspx" />
+    <Content Include="个工作.aspx" />
+    <Content Include="个技能.aspx" />
+    <Content Include="个生活.aspx" />
+    <Content Include="个知识.aspx" />
+    <Content Include="回健康.aspx" />
+    <Content Include="回工作.aspx" />
+    <Content Include="回技能.aspx" />
+    <Content Include="回生活.aspx" />
+    <Content Include="回知识.aspx" />
+    <Content Include="images\1.jpg.jfif" />
+    <Content Include="images\2.jfif" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\31.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\ABTAD1D79126E9EC3C880F48A7BB27F0588E612E45E5D9D99DFA48EFDDC84D37AB4.jfif" />
+    <Content Include="images\yonghu.jpg" />
+    <Content Include="搜索.aspx" />
+    <Content Include="规划健康.aspx" />
+    <Content Include="规划工作.aspx" />
+    <Content Include="规划技能.aspx" />
+    <Content Include="规划生活.aspx" />
+    <Content Include="规划知识.aspx" />
+    <Content Include="首健康.aspx" />
+    <Content Include="首工作.aspx" />
+    <Content Include="首技能.aspx" />
+    <Content Include="首模态框.aspx" />
+    <Content Include="首生活.aspx" />
+    <Content Include="首知识.aspx" />
+    <Content Include="首页.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\DB.cs" />
+    <Compile Include="child1.aspx.cs">
+      <DependentUpon>child1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="child1.aspx.designer.cs">
+      <DependentUpon>child1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="First.Master.cs">
+      <DependentUpon>First.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="First.Master.designer.cs">
+      <DependentUpon>First.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="teset.aspx.cs">
+      <DependentUpon>teset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="teset.aspx.designer.cs">
+      <DependentUpon>teset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test1.aspx.cs">
+      <DependentUpon>test1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test1.aspx.designer.cs">
+      <DependentUpon>test1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个个人资料.aspx.cs">
+      <DependentUpon>个个人资料.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个个人资料.aspx.designer.cs">
+      <DependentUpon>个个人资料.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个健康.aspx.cs">
+      <DependentUpon>个健康.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个健康.aspx.designer.cs">
+      <DependentUpon>个健康.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个工作.aspx.cs">
+      <DependentUpon>个工作.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个工作.aspx.designer.cs">
+      <DependentUpon>个工作.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个技能.aspx.cs">
+      <DependentUpon>个技能.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个技能.aspx.designer.cs">
+      <DependentUpon>个技能.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个生活.aspx.cs">
+      <DependentUpon>个生活.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个生活.aspx.designer.cs">
+      <DependentUpon>个生活.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个知识.aspx.cs">
+      <DependentUpon>个知识.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="个知识.aspx.designer.cs">
+      <DependentUpon>个知识.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="回健康.aspx.cs">
+      <DependentUpon>回健康.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="回健康.aspx.designer.cs">
+      <DependentUpon>回健康.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="回工作.aspx.cs">
+      <DependentUpon>回工作.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="回工作.aspx.designer.cs">
+      <DependentUpon>回工作.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="回技能.aspx.cs">
+      <DependentUpon>回技能.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="回技能.aspx.designer.cs">
+      <DependentUpon>回技能.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="回生活.aspx.cs">
+      <DependentUpon>回生活.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="回生活.aspx.designer.cs">
+      <DependentUpon>回生活.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="回知识.aspx.cs">
+      <DependentUpon>回知识.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="回知识.aspx.designer.cs">
+      <DependentUpon>回知识.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="搜索.aspx.cs">
+      <DependentUpon>搜索.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="搜索.aspx.designer.cs">
+      <DependentUpon>搜索.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="母个人中心.master.cs">
+      <DependentUpon>母个人中心.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="母个人中心.master.designer.cs">
+      <DependentUpon>母个人中心.master</DependentUpon>
+    </Compile>
+    <Compile Include="母回答.master.cs">
+      <DependentUpon>母回答.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="母回答.master.designer.cs">
+      <DependentUpon>母回答.master</DependentUpon>
+    </Compile>
+    <Compile Include="母规划.master.cs">
+      <DependentUpon>母规划.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="母规划.master.designer.cs">
+      <DependentUpon>母规划.master</DependentUpon>
+    </Compile>
+    <Compile Include="母首页.master.cs">
+      <DependentUpon>母首页.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="母首页.master.designer.cs">
+      <DependentUpon>母首页.master</DependentUpon>
+    </Compile>
+    <Compile Include="规划健康.aspx.cs">
+      <DependentUpon>规划健康.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="规划健康.aspx.designer.cs">
+      <DependentUpon>规划健康.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="规划工作.aspx.cs">
+      <DependentUpon>规划工作.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="规划工作.aspx.designer.cs">
+      <DependentUpon>规划工作.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="规划技能.aspx.cs">
+      <DependentUpon>规划技能.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="规划技能.aspx.designer.cs">
+      <DependentUpon>规划技能.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="规划生活.aspx.cs">
+      <DependentUpon>规划生活.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="规划生活.aspx.designer.cs">
+      <DependentUpon>规划生活.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="规划知识.aspx.cs">
+      <DependentUpon>规划知识.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="规划知识.aspx.designer.cs">
+      <DependentUpon>规划知识.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首健康.aspx.cs">
+      <DependentUpon>首健康.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首健康.aspx.designer.cs">
+      <DependentUpon>首健康.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首工作.aspx.cs">
+      <DependentUpon>首工作.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首工作.aspx.designer.cs">
+      <DependentUpon>首工作.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首技能.aspx.cs">
+      <DependentUpon>首技能.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首技能.aspx.designer.cs">
+      <DependentUpon>首技能.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首模态框.aspx.cs">
+      <DependentUpon>首模态框.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首模态框.aspx.designer.cs">
+      <DependentUpon>首模态框.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首生活.aspx.cs">
+      <DependentUpon>首生活.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首生活.aspx.designer.cs">
+      <DependentUpon>首生活.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首知识.aspx.cs">
+      <DependentUpon>首知识.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首知识.aspx.designer.cs">
+      <DependentUpon>首知识.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="首页.aspx.cs">
+      <DependentUpon>首页.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="首页.aspx.designer.cs">
+      <DependentUpon>首页.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dist\css\bootstrap-theme.css.map" />
+    <Content Include="dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="dist\css\bootstrap.css.map" />
+    <Content Include="dist\css\bootstrap.min.css.map" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="js\.jscsrc" />
+    <Content Include="js\.jshintrc" />
+    <Content Include="js\tests\README.md" />
+    <Content Include="js\tests\unit\.jshintrc" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.rtl.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.esm.js.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-5.1.3-dist\js\bootstrap.min.js.map" />
+    <Content Include="First.Master" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile3.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="母首页.master" />
+    <Content Include="母规划.master" />
+    <Content Include="母个人中心.master" />
+    <Content Include="母回答.master" />
+    <Content Include="images\4.heic" />
+    <Content Include="images\4.webp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50986</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44356/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
